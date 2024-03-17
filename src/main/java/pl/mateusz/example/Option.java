@@ -2,10 +2,10 @@ package pl.mateusz.example;
 
 public enum Option {
 
-    ADD(1,"Dodaj transakcję"),
-    UPDATE(2,"Zaktualizuj transakcję"),
-    DELETE(3,"Usuń transakcję"),
-    DISPLAY(4,"Wyświetl transakcje według typu"),
+    ADD(1, "Dodaj transakcję"),
+    UPDATE(2, "Zaktualizuj transakcję"),
+    DELETE(3, "Usuń transakcję"),
+    DISPLAY(4, "Wyświetl transakcje według typu"),
     EXIT(5, "Wyjście");
 
     private int id;

@@ -3,7 +3,7 @@ package pl.mateusz.example;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 
 public class Transaction {
 
@@ -12,6 +12,8 @@ public class Transaction {
     private String description;
     private BigDecimal amount;
     private LocalDateTime localDateTime;
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
 
     public Transaction(Type type, String description, BigDecimal amount, LocalDateTime localDateTime) {
         this.type = type;
@@ -73,6 +75,6 @@ public class Transaction {
     public String toString() {
         return "Transakcja: id: " + id + ", typ: " + type.getTranslation() + ", opis: " + description +
                 ", kwota: " + amount + ", data realizacji: " +
-                localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+                localDateTime.format(DATE_TIME_FORMATTER);
     }
 }
